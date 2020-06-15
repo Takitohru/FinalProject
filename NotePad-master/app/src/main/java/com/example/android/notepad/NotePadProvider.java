@@ -16,15 +16,13 @@
 
 package com.example.android.notepad;
 
-import com.example.android.notepad.NotePad;
-
 import android.content.ClipDescription;
 import android.content.ContentProvider;
+import android.content.ContentProvider.PipeDataWriter;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.UriMatcher;
-import android.content.ContentProvider.PipeDataWriter;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -48,6 +46,7 @@ import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+
 /**
  * Provides access to a database of notes. Each note has a title, the note
  * itself, a creation date and a modified data.
@@ -81,7 +80,7 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
      */
     private static final String[] READ_NOTE_PROJECTION = new String[] {
             NotePad.Notes._ID,               // Projection position 0, the note's id
-            NotePad.Notes.COLUMN_NAME_NOTE,  // Projection position 1, the note's content
+            NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,  // Projection position 1, the note's content
             NotePad.Notes.COLUMN_NAME_TITLE, // Projection position 2, the note's title
     };
     private static final int READ_NOTE_NOTE_INDEX = 1;
@@ -399,7 +398,7 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
     /**
      * Returns a stream of data for each supported stream type. This method does a query on the
      * incoming URI, then uses
-     * {@link android.content.ContentProvider#openPipeHelper(Uri, String, Bundle, Object,
+     * {@link ContentProvider#openPipeHelper(Uri, String, Bundle, Object,
      * PipeDataWriter)} to start another thread in which to convert the data into a stream.
      *
      * @param uri The URI pattern that points to the data stream
@@ -456,7 +455,7 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
     }
 
     /**
-     * Implementation of {@link android.content.ContentProvider.PipeDataWriter}
+     * Implementation of {@link PipeDataWriter}
      * to perform the actual work of converting the data in one of cursors to a
      * stream of data for the client to read.
      */

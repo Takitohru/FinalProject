@@ -10,7 +10,7 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SimpleCursorAdapter;
 
-public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextListener {
+public class NoteSearch extends ListActivity implements SearchView.OnQueryTextListener {
     private static final String[] PROJECTION = new String[] {
             NotePad.Notes._ID, // 0
             NotePad.Notes.COLUMN_NAME_TITLE, // 1
@@ -37,7 +37,7 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
         String selection = NotePad.Notes.COLUMN_NAME_TITLE + " Like ? ";  //sql模糊查询语句
         String[] selectionArgs = { "%"+newText+"%" };   //添加模糊查询参数
         //Cursor游标查询符合条件数据
-        Cursor cursor = managedQuery(
+        Cursor cursor = getContentResolver().query(
                 getIntent().getData(),            // Use the default content URI for the provider.
                 PROJECTION,                       // Return the note ID and title for each note. and modifcation date
                 selection,

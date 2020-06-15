@@ -1,4 +1,7 @@
-#Thu May 28 13:01:57 CST 2020
-base.0=D\:\\android\\NotePad-master\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+#Mon Jun 15 11:00:40 CST 2020
+base.0=D\:\\android\\NotePad-master\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=D\:\\android\\NotePad-master\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
