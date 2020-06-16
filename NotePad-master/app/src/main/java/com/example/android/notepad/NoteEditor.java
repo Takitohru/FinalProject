@@ -27,6 +27,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.net.Uri;
@@ -64,7 +65,7 @@ public class NoteEditor extends Activity {
             NotePad.Notes._ID,
             NotePad.Notes.COLUMN_NAME_TITLE,
             NotePad.Notes.COLUMN_NAME_NOTE,
-
+            NotePad.Notes.COLUMN_NAME_BACK_COLOR,
     };
 
     // A label for the saved state of the activity
@@ -252,7 +253,6 @@ public class NoteEditor extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-
         /*
          * mCursor is initialized, since onCreate() always precedes onResume for any running
          * process. This tests that it's not null, since it should always contain data.
@@ -267,7 +267,35 @@ public class NoteEditor extends Activity {
              * record.
              */
             mCursor.moveToFirst();
-
+            int x = mCursor.getInt(mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_BACK_COLOR));
+            /**
+             * 白 255 255 255
+             * 黄 247 216 133
+             * 蓝 165 202 237
+             * 绿 161 214 174
+             * 红 244 149 133
+             */
+            Log.i(TAG, "onResume: "+x);
+            switch (x){
+                case NotePad.Notes.DEFAULT_COLOR:
+                    mText.setBackgroundColor(Color.rgb(255, 255, 255));
+                    break;
+                case NotePad.Notes.YELLOW_COLOR:
+                    mText.setBackgroundColor(Color.rgb(247, 216, 133));
+                    break;
+                case NotePad.Notes.BLUE_COLOR:
+                    mText.setBackgroundColor(Color.rgb(165, 202, 237));
+                    break;
+                case NotePad.Notes.GREEN_COLOR:
+                    mText.setBackgroundColor(Color.rgb(161, 214, 174));
+                    break;
+                case NotePad.Notes.RED_COLOR:
+                    mText.setBackgroundColor(Color.rgb(244, 149, 133));
+                    break;
+                default:
+                    mText.setBackgroundColor(Color.rgb(255, 255, 255));
+                    break;
+            }
             // Modifies the window title for the Activity according to the current Activity state.
             if (mState == STATE_EDIT) {
                 // Set the title of the Activity to include the note title
@@ -449,6 +477,12 @@ public class NoteEditor extends Activity {
         case R.id.menu_revert:
             cancelNote();
             break;
+            case R.id.menu_color:
+                //改变颜色
+                Intent intent = new Intent(null,mUri);
+                intent.setClass(NoteEditor.this,NoteColor.class);
+                NoteEditor.this.startActivity(intent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

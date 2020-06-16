@@ -4,12 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BlankFragment">
-    <TextView
-        android:id="@+id/content_tv"
-        android:layout_width="wrap_content"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    <Button
+        android:id="@+id/myStyle"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:drawableRight="@drawable/right"
+        android:drawablePadding="10dp"
         android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:text="123" />
+        android:gravity="center_vertical"
+        android:text="我的主题" />
+    <Button
+        android:id="@+id/about"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:drawableRight="@drawable/right"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text="关于" />
+    </LinearLayout>
 </FrameLayout>

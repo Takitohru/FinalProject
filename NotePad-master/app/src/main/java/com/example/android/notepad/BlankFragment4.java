@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -53,8 +55,22 @@ public class BlankFragment4 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_blank4, container, false);
-        TextView contentTv = rootView.findViewById(R.id.content_tv);
-        contentTv.setText(mContentText);
+        Button button1=(Button)rootView.findViewById(R.id.myStyle);
+        Button button2=(Button)rootView.findViewById(R.id.about);
+        //我的主题按钮监听
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        //关于 按钮监听
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         return rootView;
     }
 }

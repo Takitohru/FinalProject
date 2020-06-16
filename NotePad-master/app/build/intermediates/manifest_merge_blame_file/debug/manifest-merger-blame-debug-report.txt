@@ -33,7 +33,7 @@
 31-->D:\android\NotePad-master\app\src\main\AndroidManifest.xml
 32
 33    <application
-33-->D:\android\NotePad-master\app\src\main\AndroidManifest.xml:25:5-140:19
+33-->D:\android\NotePad-master\app\src\main\AndroidManifest.xml:25:5-143:19
 34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 34-->[androidx.core:core:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\f01b27bb220ecb79298884ef36a7a2fb\core-1.1.0\AndroidManifest.xml:24:18-86
 35        android:debuggable="true"
@@ -281,6 +281,16 @@
 169-->D:\android\NotePad-master\app\src\main\AndroidManifest.xml:36:27-73
 170            </intent-filter>
 171        </activity>
-172    </application>
-173
-174</manifest>
+172        <activity
+172-->D:\android\NotePad-master\app\src\main\AndroidManifest.xml:138:9-141:57
+173            android:name="com.example.android.notepad.NoteColor"
+173-->D:\android\NotePad-master\app\src\main\AndroidManifest.xml:138:19-43
+174            android:label="ChangeColor"
+174-->D:\android\NotePad-master\app\src\main\AndroidManifest.xml:140:13-40
+175            android:theme="@android:style/Theme.Holo.Light.Dialog"
+175-->D:\android\NotePad-master\app\src\main\AndroidManifest.xml:139:13-67
+176            android:windowSoftInputMode="stateVisible" />
+176-->D:\android\NotePad-master\app\src\main\AndroidManifest.xml:141:13-55
+177    </application>
+178
+179</manifest>

@@ -691,6 +691,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable right
 drawable sign4
 drawable tab_contact_selector
 drawable tab_record_selector
@@ -704,6 +705,7 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id about
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -771,6 +773,11 @@ id checkbox
 id checked
 id chronometer
 id collapseActionView
+id color_blue
+id color_green
+id color_red
+id color_white
+id color_yellow
 id contact_tab
 id content
 id contentPanel
@@ -812,6 +819,7 @@ id line3
 id listMode
 id list_item
 id menu_add
+id menu_color
 id menu_delete
 id menu_paste
 id menu_revert
@@ -820,6 +828,7 @@ id menu_search
 id message
 id middle
 id multiply
+id myStyle
 id never
 id none
 id normal
@@ -957,6 +966,7 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout search
+layout select_color
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1032,7 +1042,8 @@ style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
-style AppTheme
+style AppDarkTheme
+style AppLightTheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

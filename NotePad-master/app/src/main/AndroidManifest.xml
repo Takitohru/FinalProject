@@ -135,7 +135,10 @@
             </intent-filter>
 
         </activity>
-
+        <activity android:name="NoteColor"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:label="ChangeColor"
+            android:windowSoftInputMode="stateVisible"/>
 
     </application>
 
