@@ -654,6 +654,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable add_sign
 drawable app_notes
+drawable arrow_right
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -696,6 +697,7 @@ drawable tab_contact_selector
 drawable tab_record_selector
 drawable tab_setting_selector
 drawable tab_sign_selector
+drawable table_shape
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -760,6 +762,8 @@ id add
 id alertTitle
 id always
 id async
+id backupButton
+id backupText
 id barrier
 id beginning
 id blocking
@@ -838,6 +842,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id record_tab
+id restoreButton
+id restoreText
 id right
 id right_icon
 id right_side
@@ -969,6 +975,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap icon_search_default
 mipmap icon_search_press
+mipmap sign
 mipmap tabbar_contact_default
 mipmap tabbar_contact_pressed
 mipmap tabbar_record_default

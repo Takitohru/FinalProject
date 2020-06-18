@@ -1,15 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlankFragment">
-    <TextView
-        android:id="@+id/content_tv"
-        android:layout_width="wrap_content"
+    tools:context=".BlankFragment3">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:text="123" />
+        android:layout_margin="10dp"
+        android:background="@drawable/table_shape"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/backupText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="14dp"
+                android:textSize="18dp"
+                android:text="备份"/>
+
+            <ImageButton
+                android:id="@+id/backupButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/arrow_right"
+                android:background="@android:color/transparent"
+                android:padding="5dp"/>
+        </TableRow>
+
+        <View
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <TableRow android:collapseColumns="2">
+            <TextView
+                android:id="@+id/restoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="14dp"
+                android:textSize="18dp"
+                android:text="还原"/>
+
+            <ImageButton
+                android:id="@+id/restoreButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right"
+                android:layout_gravity="right"
+                android:background="@android:color/transparent"
+                android:padding="5dp"/>
+        </TableRow>
+    </TableLayout>
+
+
 </FrameLayout>
