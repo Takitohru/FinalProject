@@ -30,7 +30,6 @@ public class BlankFragment2 extends ListFragment implements SearchView.OnQueryTe
             NotePad.Notes._ID, // 0
             NotePad.Notes.COLUMN_NAME_TITLE, // 1
             NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, //2
-            NotePad.Notes.COLUMN_NAME_BACK_COLOR,
     };
     SearchView searchview;
     public BlankFragment2() {

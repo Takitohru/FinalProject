@@ -12,8 +12,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,7 +37,8 @@ public class BlankFragment extends ListFragment {
             NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,
             NotePad.Notes.COLUMN_NAME_BACK_COLOR,
     };
-
+    private static final String TAG = "MainActivity";
+    private ArrayAdapter<String> arr_adapter;
     /** The index of the title column */
     private static final int COLUMN_INDEX_TITLE = 1;
 
@@ -77,10 +84,10 @@ public class BlankFragment extends ListFragment {
          * value will appear in the ListView.
          */
         // The names of the cursor columns to display in the view, initialized to the title column
-        String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE,NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE} ;
+        String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE, NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE} ;
         // The view IDs that will display the cursor columns, initialized to the TextView in
         // noteslist_item.xml
-        int[] viewIDs = { android.R.id.text1,R.id.date};
+        int[] viewIDs = { android.R.id.text1, R.id.date};
 
         // Creates the backing adapter for the ListView.
         SimpleCursorAdapter adapter
@@ -100,6 +107,101 @@ public class BlankFragment extends ListFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_blank, container, false);
+        //数据
+        List<String> data_list = new ArrayList<>();
+        data_list.add("按创建时间排序");
+        data_list.add("按修改时间排序");
+        data_list.add("按颜色排序");
+        Spinner final_spinner = (Spinner) rootView.findViewById(R.id.spinner1);
+        //适配器 系统默认布局  android.R.layout.simple_spinner_item
+        // 可以自定义
+        arr_adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, data_list);
+        //设置默认样式 android.R.layout.simple_spinner_dropdown_item
+        // 自定义样式与右边三角形一致
+        arr_adapter.setDropDownViewResource(R.layout.select_sort);
+        //加载适配器
+        final_spinner.setAdapter(arr_adapter);
+        //为下拉列表设置各种点击事件，以响应菜单中的文本item被选中了，用setOnItemSelectedListener
+        //设置垂直偏移量 (以下属性均可布局里设置)
+        final_spinner.setDropDownVerticalOffset(80);
+        //设置水平偏移量
+        final_spinner.setDropDownHorizontalOffset(80);
+        //修改背景 (带圆角的背景)
+        final_spinner.setPopupBackgroundResource(R.drawable.radius);
+        //MODE_DROPDOWN 在控件下面显示   MODE_DIALOG:在中间显示
+        final_spinner.setLayoutMode(Spinner.MODE_DROPDOWN);
+        //里面item点击监听 默认选择第一个
+        final_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //点击事件对应的epostion
+                 SimpleCursorAdapter adapter;
+                 Cursor cursor;
+                 String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,  NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE } ;
+                 int[] viewIDs = { android.R.id.text1 , R.id.date };
+               switch (position) {
+                   case 0:
+                       cursor = getActivity().managedQuery(
+                               intent.getData(),
+                               PROJECTION,
+                               null,
+                               null,
+                               NotePad.Notes._ID
+                       );
+                        adapter
+                               = new SimpleCursorAdapter(
+                               getActivity(),                             // The Context for the ListView
+                               R.layout.noteslist_item,          // Points to the XML for a list item
+                               cursor,                           // The cursor to get items from
+                               dataColumns,
+                               viewIDs
+                       );
+                       setListAdapter(adapter);
+                       break;
+                   case 1:
+                        cursor = getActivity().managedQuery(
+                               intent.getData(),
+                               PROJECTION,
+                               null,
+                               null,
+                               NotePad.Notes.DEFAULT_SORT_ORDER
+                       );
+                        adapter
+                               = new SimpleCursorAdapter(
+                               getActivity(),                             // The Context for the ListView
+                               R.layout.noteslist_item,          // Points to the XML for a list item
+                               cursor,                           // The cursor to get items from
+                               dataColumns,
+                               viewIDs
+                       );
+                       setListAdapter(adapter);
+                       break;
+                   case 2:
+                        cursor = getActivity().managedQuery(
+                               intent.getData(),
+                               PROJECTION,
+                               null,
+                               null,
+                               NotePad.Notes.COLUMN_NAME_BACK_COLOR
+                       );
+                        adapter
+                               = new SimpleCursorAdapter(
+                               getActivity(),                             // The Context for the ListView
+                               R.layout.noteslist_item,          // Points to the XML for a list item
+                               cursor,                           // The cursor to get items from
+                               dataColumns,
+                               viewIDs
+                       );
+                       setListAdapter(adapter);
+                       break;
+               }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         return rootView;
     }
     @Override

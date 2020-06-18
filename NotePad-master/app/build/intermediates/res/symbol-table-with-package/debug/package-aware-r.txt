@@ -654,6 +654,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable add_sign
 drawable app_notes
+drawable arrow_right
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -691,14 +692,17 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable radius
 drawable right
 drawable sign4
 drawable tab_contact_selector
 drawable tab_record_selector
 drawable tab_setting_selector
 drawable tab_sign_selector
+drawable table_shape
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable withdraw_spinner
 id ALT
 id CTRL
 id FUNCTION
@@ -762,6 +766,7 @@ id add
 id alertTitle
 id always
 id async
+id backupButton
 id barrier
 id beginning
 id blocking
@@ -781,7 +786,6 @@ id color_yellow
 id contact_tab
 id content
 id contentPanel
-id content_tv
 id context_copy
 id context_delete
 id context_open
@@ -819,7 +823,6 @@ id line3
 id listMode
 id list_item
 id menu_add
-id menu_color
 id menu_delete
 id menu_paste
 id menu_revert
@@ -847,6 +850,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id record_tab
+id restoreButton
 id right
 id right_icon
 id right_side
@@ -873,6 +877,7 @@ id showHome
 id showTitle
 id sign_iv
 id spacer
+id spinner1
 id split_action_bar
 id spread
 id spread_inside
@@ -970,6 +975,7 @@ layout select_color
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout select_sort
 layout support_simple_spinner_dropdown_item
 layout title_editor
 menu editor_options_menu
@@ -979,6 +985,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap icon_search_default
 mipmap icon_search_press
+mipmap sign
 mipmap tabbar_contact_default
 mipmap tabbar_contact_pressed
 mipmap tabbar_record_default
@@ -1042,8 +1049,7 @@ style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
-style AppDarkTheme
-style AppLightTheme
+style AppTheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

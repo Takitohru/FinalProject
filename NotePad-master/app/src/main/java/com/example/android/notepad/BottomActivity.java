@@ -11,7 +11,7 @@ public class BottomActivity extends Activity {
     private RadioGroup mTabRadioGroup;
     private BlankFragment mFrag1=BlankFragment.newInstance("首页");
     private BlankFragment2 mFrag2=BlankFragment2.newInstance("搜索");
-    private BlankFragment3 mFrag3=BlankFragment3.newInstance("备份");
+    private BlankFragment3 mFrag3=BlankFragment3.newInstance("首页备份");
     private BlankFragment4 mFrag4=BlankFragment4.newInstance("设置");
 
     @Override
