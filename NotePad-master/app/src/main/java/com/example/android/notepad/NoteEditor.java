@@ -17,26 +17,37 @@
 package com.example.android.notepad;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.DatePickerDialog;
+import android.app.PendingIntent;
+import android.app.TimePickerDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.icu.util.Calendar;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -64,7 +75,8 @@ public class NoteEditor extends Activity {
             NotePad.Notes._ID,
             NotePad.Notes.COLUMN_NAME_TITLE,
             NotePad.Notes.COLUMN_NAME_NOTE,
-
+            NotePad.Notes.COLUMN_NAME_BACK_COLOR,
+            NotePad.Notes.COLUMN_NAME_ALARM,
     };
 
     // A label for the saved state of the activity
@@ -267,7 +279,35 @@ public class NoteEditor extends Activity {
              * record.
              */
             mCursor.moveToFirst();
-
+            int x = mCursor.getInt(mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_BACK_COLOR));
+            /**
+             * 白 255 255 255
+             * 黄 247 216 133
+             * 蓝 165 202 237
+             * 绿 161 214 174
+             * 红 244 149 133
+             */
+            Log.i(TAG, "onResume: "+x);
+            switch (x){
+                case NotePad.Notes.DEFAULT_COLOR:
+                    mText.setBackgroundColor(Color.rgb(255, 255, 255));
+                    break;
+                case NotePad.Notes.YELLOW_COLOR:
+                    mText.setBackgroundColor(Color.rgb(247, 216, 133));
+                    break;
+                case NotePad.Notes.BLUE_COLOR:
+                    mText.setBackgroundColor(Color.rgb(165, 202, 237));
+                    break;
+                case NotePad.Notes.GREEN_COLOR:
+                    mText.setBackgroundColor(Color.rgb(161, 214, 174));
+                    break;
+                case NotePad.Notes.RED_COLOR:
+                    mText.setBackgroundColor(Color.rgb(244, 149, 133));
+                    break;
+                default:
+                    mText.setBackgroundColor(Color.rgb(255, 255, 255));
+                    break;
+            }
             // Modifies the window title for the Activity according to the current Activity state.
             if (mState == STATE_EDIT) {
                 // Set the title of the Activity to include the note title
@@ -437,6 +477,12 @@ public class NoteEditor extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle all of the possible menu actions.
         switch (item.getItemId()) {
+        case R.id.menu_alarmOn:
+            alarmOn();
+            break;
+        case R.id.menu_alarmOff:
+            alarmOff();
+            break;
         case R.id.menu_save:
             String text = mText.getText().toString();
             updateNote(text, null);
@@ -449,6 +495,12 @@ public class NoteEditor extends Activity {
         case R.id.menu_revert:
             cancelNote();
             break;
+            case R.id.menu_color:
+                //改变颜色
+                Intent intent = new Intent(null,mUri);
+                intent.setClass(NoteEditor.this,NoteColor.class);
+                NoteEditor.this.startActivity(intent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -520,6 +572,70 @@ public class NoteEditor extends Activity {
     }
 //END_INCLUDE(paste)
 
+    Calendar alarmCalendar;
+    private void alarmOn() {
+        Calendar currentTime = Calendar.getInstance();
+        final TimePickerDialog t = new TimePickerDialog(NoteEditor.this, 0, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                alarmCalendar.set(Calendar.HOUR, hourOfDay);
+                alarmCalendar.set(Calendar.MINUTE, minute);
+                alarmCalendar.set(Calendar.SECOND, 0);
+                Log.e("用户选取时间",String.valueOf(alarmCalendar.getTimeInMillis()));
+//                AlarmManager alarmMgr = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+//                Intent intent = new Intent(getApplicationContext(),
+//                        AlarmReceiver.class);
+//                intent.putExtra("Title", true);
+//                PendingIntent setPendIntent0 = PendingIntent.getBroadcast(
+//                        getApplicationContext(), 0, intent,
+//                        PendingIntent.FLAG_UPDATE_CURRENT);
+//                Log.e("FLAG_UPDATE_CURRENT-->setPendIntent0：", setPendIntent0
+//                        + "");
+//                alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+//                        0, setPendIntent0);
+            }
+        }, currentTime.get(Calendar.HOUR_OF_DAY), currentTime.get(Calendar.MINUTE), false);
+        final DatePickerDialog d = new DatePickerDialog(NoteEditor.this, 0, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                alarmCalendar = Calendar.getInstance();
+                alarmCalendar.set(year,month,dayOfMonth);
+                t.show();
+            }
+        }, currentTime.get(Calendar.YEAR), currentTime.get(Calendar.MONTH), currentTime.get(Calendar.DAY_OF_MONTH));
+        d.show();
+    }
+    boolean alarmOff = false;
+    private void alarmOff() {
+        int colAlarmIndex = mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_ALARM);
+        Log.e("colAlarmIndex",String.valueOf(colAlarmIndex));
+        String dateTime = mCursor.getString(colAlarmIndex);
+        if(dateTime == null){
+            Toast.makeText(NoteEditor.this, "未设置闹钟", Toast.LENGTH_LONG).show();
+            return;
+        }
+        Log.e("读取的时间为",dateTime);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        long l = 0;
+        try {
+            l = format.parse(dateTime).getTime();
+        }catch (Exception e){
+
+        }
+        AlarmManager alarmMgr = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(getApplicationContext(),
+                AlarmReceiver.class);
+        //intent.putExtra("flag", false);
+        PendingIntent StopPendIntent = PendingIntent.getBroadcast(
+                getApplicationContext(), (int)l, intent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Log.e("FLAG_UPDATE_CURRENT-->StopPendIntent0：", StopPendIntent
+                + "");
+        alarmMgr.cancel(StopPendIntent);
+        Toast.makeText(NoteEditor.this, "该笔记闹钟已取消", Toast.LENGTH_LONG).show();
+        alarmOff = true;
+    }
     /**
      * Replaces the current note contents with the text and title provided as arguments.
      * @param text The new note contents to use.
@@ -535,6 +651,28 @@ public class NoteEditor extends Activity {
         String dateTime = format.format(date);
         values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, dateTime);
 
+        if(alarmCalendar != null && alarmCalendar.get(Calendar.SECOND)== 0 ){
+            long l = Long.valueOf(alarmCalendar.getTimeInMillis());
+            Date d = new Date(l);
+            String t = format.format(d);
+            values.put(NotePad.Notes.COLUMN_NAME_ALARM, t);
+            Log.e("闹钟时间", t);
+            AlarmManager alarmMgr = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            Intent intent = new Intent(getApplicationContext(),
+                    AlarmReceiver.class);
+            intent.putExtra("Title", title);
+
+            PendingIntent setPendIntent = PendingIntent.getBroadcast(
+                    getApplicationContext(), (int)l, intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT);
+            Log.e("FLAG_UPDATE_CURRENT-->setPendIntent0：", setPendIntent
+                    + "");
+            alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                    0, setPendIntent);
+        }
+        if(alarmOff){
+            values.put(NotePad.Notes.COLUMN_NAME_ALARM, "");
+        }
         // If the action is to insert a new note, this creates an initial title for it.
         if (mState == STATE_INSERT) {
 

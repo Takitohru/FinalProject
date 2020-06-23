@@ -1,9 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:1-152:12
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:1-152:12
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:1-152:12
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:1-152:12
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:1-155:12
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:1-155:12
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:1-155:12
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:1-155:12
+MERGED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-32:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\d74b5b498b35fd5cb32d0a6997bb1d3d\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\d934be3c652b5ff5c18e2d68c8236453\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -25,25 +26,27 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ezaki\.gradle\ca
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\df65787e67fe4b4bc0635deed9695797\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\a1f5477cd6fd5fad9baa3e263bec7d60\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\60b50828def4ba3859898ffb4c971c21\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:1-152:12
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:1-152:12
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:1-152:12
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:1-155:12
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:1-155:12
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:1-155:12
 	package
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:23:5-42
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:23:5-42
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:1-152:12
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:1-155:12
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:1-152:12
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:1-155:12
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:22:11-69
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:22:11-69
 application
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:25:5-145:19
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:25:5-148:19
+MERGED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:5-30:19
+MERGED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:5-30:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\f01b27bb220ecb79298884ef36a7a2fb\core-1.1.0\AndroidManifest.xml:24:5-89
@@ -51,187 +54,195 @@ MERGED from [androidx.core:core:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\f3128affa7000c088d176285d7f5681f\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\f3128affa7000c088d176285d7f5681f\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 	android:requestLegacyExternalStorage
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:27:9-52
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:27:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\f01b27bb220ecb79298884ef36a7a2fb\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:26:9-41
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:26:9-41
 	android:icon
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:25:18-52
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:25:18-52
 provider#com.example.android.notepad.NotePadProvider
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:29:9-33:20
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:29:9-33:20
 	android:authorities
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:30:13-62
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:30:13-62
 	android:exported
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:31:13-36
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:31:13-36
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:29:19-49
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:29:19-49
 grant-uri-permission
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:32:13-62
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:32:13-62
 	android:pathPattern
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:32:35-59
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:32:35-59
 activity#com.example.android.notepad.NotesList
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:35:9-53:20
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:35:9-53:20
 	android:label
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:35:44-84
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:35:44-84
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:35:19-43
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:35:19-43
 intent-filter#category:name:android.intent.category.DEFAULT
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:36:13-38:29
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:36:13-38:29
 category#android.intent.category.DEFAULT
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:37:17-76
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:37:17-76
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:37:27-73
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:37:27-73
 intent-filter#action:name:android.intent.action.EDIT+action:name:android.intent.action.PICK+action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:vnd.android.cursor.dir/vnd.google.note
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:40:13-46:29
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:40:13-46:29
 action#android.intent.action.VIEW
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:41:17-69
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:41:25-66
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:41:25-66
 action#android.intent.action.EDIT
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:42:17-69
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:42:17-69
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:42:25-66
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:42:25-66
 action#android.intent.action.PICK
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:43:17-69
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:43:17-69
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:43:25-66
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:43:25-66
 data
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:45:17-83
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:45:17-83
 	android:mimeType
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:45:23-80
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:45:23-80
 intent-filter#action:name:android.intent.action.GET_CONTENT+category:name:android.intent.category.DEFAULT+data:mimeType:vnd.android.cursor.item/vnd.google.note
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:48:13-52:29
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:48:13-52:29
 action#android.intent.action.GET_CONTENT
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:49:17-76
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:49:17-76
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:49:25-73
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:49:25-73
 activity#com.example.android.notepad.NoteEditor
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:55:9-81:20
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:55:9-81:20
 	android:screenOrientation
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:57:13-47
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:57:13-47
 	android:configChanges
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:58:13-63
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:58:13-63
 	android:theme
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:56:13-60
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:56:13-60
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:55:19-44
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:55:19-44
 intent-filter#action:name:android.intent.action.EDIT+action:name:android.intent.action.VIEW+action:name:com.android.notepad.action.EDIT_NOTE+category:name:android.intent.category.DEFAULT+data:mimeType:vnd.android.cursor.item/vnd.google.note
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:62:13-68:29
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:62:13-68:29
 	android:label
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:62:28-64
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:62:28-64
 action#com.android.notepad.action.EDIT_NOTE
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:65:17-79
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:65:17-79
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:65:25-76
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:65:25-76
 intent-filter#action:name:android.intent.action.INSERT+action:name:android.intent.action.PASTE+category:name:android.intent.category.DEFAULT+data:mimeType:vnd.android.cursor.dir/vnd.google.note
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:74:13-79:29
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:74:13-79:29
 action#android.intent.action.INSERT
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:75:17-71
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:75:17-71
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:75:25-68
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:75:25-68
 action#android.intent.action.PASTE
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:76:17-70
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:76:17-70
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:76:25-67
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:76:25-67
 activity#com.example.android.notepad.NoteSearch
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:82:9-94:20
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:82:9-94:20
 	android:label
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:84:13-39
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:84:13-39
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:83:13-39
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:83:13-39
 intent-filter#action:name:android.intent.action.NoteSearch+action:name:android.intent.action.SEARCH+action:name:android.intent.action.SEARCH_LONG_PRESS+category:name:android.intent.category.DEFAULT+data:mimeType:vnd.android.cursor.dir/vnd.google.note
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:87:13-93:29
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:87:13-93:29
 action#android.intent.action.NoteSearch
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:88:17-75
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:88:17-75
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:88:25-72
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:88:25-72
 action#android.intent.action.SEARCH
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:89:17-71
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:89:17-71
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:89:25-68
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:89:25-68
 action#android.intent.action.SEARCH_LONG_PRESS
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:90:17-82
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:90:17-82
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:90:25-79
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:90:25-79
 activity#com.example.android.notepad.TitleEditor
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:96:9-121:20
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:96:9-121:20
 	android:label
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:97:13-53
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:97:13-53
 	android:windowSoftInputMode
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:100:13-55
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:100:13-55
 	android:icon
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:98:13-50
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:98:13-50
 	android:theme
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:99:13-61
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:99:13-61
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:96:19-45
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:96:19-45
 intent-filter#action:name:com.android.notepad.action.EDIT_TITLE+category:name:android.intent.category.ALTERNATIVE+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.SELECTED_ALTERNATIVE+data:mimeType:vnd.android.cursor.item/vnd.google.note
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:105:13-120:29
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:105:13-120:29
 	android:label
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:105:28-65
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:105:28-65
 action#com.android.notepad.action.EDIT_TITLE
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:109:17-80
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:109:17-80
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:109:25-77
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:109:25-77
 category#android.intent.category.ALTERNATIVE
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:114:17-80
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:114:17-80
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:114:27-77
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:114:27-77
 category#android.intent.category.SELECTED_ALTERNATIVE
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:117:17-89
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:117:17-89
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:117:27-86
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:117:27-86
 activity#com.example.android.notepad.NotesLiveFolder
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:123:9-129:20
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:123:9-129:20
 	android:label
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:123:50-90
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:123:50-90
 	android:icon
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:124:13-55
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:124:13-55
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:123:19-49
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:123:19-49
 intent-filter#action:name:android.intent.action.CREATE_LIVE_FOLDER+category:name:android.intent.category.DEFAULT
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:125:13-128:29
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:125:13-128:29
 action#android.intent.action.CREATE_LIVE_FOLDER
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:126:17-83
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:126:17-83
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:126:25-80
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:126:25-80
 activity#com.example.android.notepad.BottomActivity
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:131:9-138:20
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:131:9-138:20
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:131:19-49
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:131:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:132:13-136:29
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:132:13-136:29
 action#android.intent.action.MAIN
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:133:17-69
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:133:17-69
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:133:25-66
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:133:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:134:17-77
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:134:17-77
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:134:27-74
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:134:27-74
 activity#com.example.android.notepad.NoteColor
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:140:9-143:57
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:140:9-143:57
 	android:label
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:142:13-40
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:142:13-40
 	android:windowSoftInputMode
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:143:13-55
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:143:13-55
 	android:theme
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:141:13-67
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:141:13-67
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:140:19-43
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:140:19-43
+receiver#com.example.android.notepad.AlarmReceiver
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:146:9-49
+	android:name
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:146:19-47
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:148:5-81
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:151:5-81
+MERGED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-81
+MERGED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:148:22-78
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:151:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:150:5-80
+ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:153:5-80
 	android:name
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml:150:22-77
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml:153:22-77
 uses-sdk
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+MERGED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\d74b5b498b35fd5cb32d0a6997bb1d3d\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\d74b5b498b35fd5cb32d0a6997bb1d3d\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
@@ -274,13 +285,59 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Ezaki\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\a1f5477cd6fd5fad9baa3e263bec7d60\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\60b50828def4ba3859898ffb4c971c21\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Ezaki\.gradle\caches\transforms-2\files-2.1\60b50828def4ba3859898ffb4c971c21\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
-INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
-		ADDED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
-		INJECTED from D:\android\final_2\FinalProject-master\NotePad-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+		ADDED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+		INJECTED from D:\android\final\NotePad-master\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-71
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-68
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-64
+uses-permission#android.permission.BROADCAST_STICKY
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-75
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-72
+uses-permission#android.permission.BLUETOOTH
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:5-68
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:22-65
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:5-80
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:22-77
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:5-74
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:22-71
+meta-data#com.baidu.speech.APP_ID
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:9-23:40
+	android:value
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-37
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-51
+meta-data#com.baidu.speech.API_KEY
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-26:56
+	android:value
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-53
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-52
+meta-data#com.baidu.speech.SECRET_KEY
+ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:9-29:64
+	android:value
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-61
+	android:name
+		ADDED from [:core] D:\android\final\NotePad-master\core\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-55

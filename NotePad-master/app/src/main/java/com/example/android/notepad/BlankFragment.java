@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -36,6 +35,7 @@ public class BlankFragment extends ListFragment {
             NotePad.Notes.COLUMN_NAME_TITLE, //1
             NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,
             NotePad.Notes.COLUMN_NAME_BACK_COLOR,
+            NotePad.Notes.COLUMN_NAME_ALARM
     };
     private static final String TAG = "MainActivity";
     private ArrayAdapter<String> arr_adapter;
@@ -80,7 +80,7 @@ public class BlankFragment extends ListFragment {
          * The following two arrays create a "map" between columns in the cursor and view IDs
          * for items in the ListView. Each element in the dataColumns array represents
          * a column name; each element in the viewID array represents the ID of a View.
-         * The SimpleCursorAdapter maps them in ascending order to determine where each column
+         * The AlarmCursorAdapter maps them in ascending order to determine where each column
          * value will appear in the ListView.
          */
         // The names of the cursor columns to display in the view, initialized to the title column
@@ -90,8 +90,8 @@ public class BlankFragment extends ListFragment {
         int[] viewIDs = { android.R.id.text1, R.id.date};
 
         // Creates the backing adapter for the ListView.
-        SimpleCursorAdapter adapter
-                = new SimpleCursorAdapter(
+        AlarmCursorAdapter adapter
+                = new AlarmCursorAdapter(
                 getActivity(),                             // The Context for the ListView
                 R.layout.noteslist_item,          // Points to the XML for a list item
                 cursor,                           // The cursor to get items from
@@ -135,7 +135,7 @@ public class BlankFragment extends ListFragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //点击事件对应的epostion
-                 SimpleCursorAdapter adapter;
+                AlarmCursorAdapter adapter;
                  Cursor cursor;
                  String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,  NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE } ;
                  int[] viewIDs = { android.R.id.text1 , R.id.date };
@@ -149,7 +149,7 @@ public class BlankFragment extends ListFragment {
                                NotePad.Notes._ID
                        );
                         adapter
-                               = new SimpleCursorAdapter(
+                               = new AlarmCursorAdapter(
                                getActivity(),                             // The Context for the ListView
                                R.layout.noteslist_item,          // Points to the XML for a list item
                                cursor,                           // The cursor to get items from
@@ -167,7 +167,7 @@ public class BlankFragment extends ListFragment {
                                NotePad.Notes.DEFAULT_SORT_ORDER
                        );
                         adapter
-                               = new SimpleCursorAdapter(
+                               = new AlarmCursorAdapter(
                                getActivity(),                             // The Context for the ListView
                                R.layout.noteslist_item,          // Points to the XML for a list item
                                cursor,                           // The cursor to get items from
@@ -185,7 +185,7 @@ public class BlankFragment extends ListFragment {
                                NotePad.Notes.COLUMN_NAME_BACK_COLOR
                        );
                         adapter
-                               = new SimpleCursorAdapter(
+                               = new AlarmCursorAdapter(
                                getActivity(),                             // The Context for the ListView
                                R.layout.noteslist_item,          // Points to the XML for a list item
                                cursor,                           // The cursor to get items from

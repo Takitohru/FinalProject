@@ -20,12 +20,18 @@
         android:layout_height="80dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/note" />
-
+    <ImageView
+        android:id="@+id/alarm"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/alarm_on" />
     <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@android:id/text1"
             android:layout_marginLeft="10dp"

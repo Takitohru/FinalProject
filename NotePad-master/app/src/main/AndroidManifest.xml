@@ -142,6 +142,9 @@
             android:label="ChangeColor"
             android:windowSoftInputMode="stateVisible"/>
 
+
+        <receiver android:name="AlarmReceiver"/>
+
     </application>
 
     <!--外部存储的写权限-->

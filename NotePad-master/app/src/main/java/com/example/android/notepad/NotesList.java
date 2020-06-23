@@ -18,6 +18,7 @@ package com.example.android.notepad;
 
 import com.example.android.notepad.NotePad;
 
+import android.app.LauncherActivity;
 import android.app.ListActivity;
 import android.content.ClipboardManager;
 import android.content.ClipData;
@@ -28,6 +29,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -64,6 +66,7 @@ public class NotesList extends ListActivity {
             NotePad.Notes._ID, // 0
             NotePad.Notes.COLUMN_NAME_TITLE, //1
             NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,
+            NotePad.Notes.COLUMN_NAME_ALARM,
     };
 
     /** The index of the title column */
@@ -75,7 +78,7 @@ public class NotesList extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Log.e("1","1");
         // The user does not need to hold down the key to use menu shortcuts.
         setDefaultKeyMode(DEFAULT_KEYS_SHORTCUT);
 
@@ -119,23 +122,27 @@ public class NotesList extends ListActivity {
          * value will appear in the ListView.
          */
         // The names of the cursor columns to display in the view, initialized to the title column
-        String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE,NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE} ;
+        String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE,
+                NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,
+                NotePad.Notes.COLUMN_NAME_ALARM} ;
         // The view IDs that will display the cursor columns, initialized to the TextView in
         // noteslist_item.xml
         int[] viewIDs = { android.R.id.text1,R.id.date};
 
         // Creates the backing adapter for the ListView.
-        SimpleCursorAdapter adapter
-                = new SimpleCursorAdapter(
+        AlarmCursorAdapter adapter
+                = new AlarmCursorAdapter(
                 this,                             // The Context for the ListView
                 R.layout.noteslist_item,          // Points to the XML for a list item
                 cursor,                           // The cursor to get items from
                 dataColumns,
                 viewIDs
         );
-
         // Sets the ListView's adapter to be the cursor adapter that was just created.
-        setListAdapter(adapter);
+        adapter.bindView(findViewById(R.id.alarm),this,cursor);
+        Log.e("1","1");
+        //setListAdapter(adapter);
+
     }
 
     /**

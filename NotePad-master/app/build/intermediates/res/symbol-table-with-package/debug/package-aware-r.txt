@@ -11,6 +11,8 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim anim_entry
+anim anim_exit
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -653,6 +655,9 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable add_sign
+drawable alarm
+drawable alarm_off
+drawable alarm_on
 drawable app_notes
 drawable arrow_right
 drawable btn_checkbox_checked_mtrl
@@ -663,6 +668,9 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable camera
+drawable distance
+drawable edit
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu_compose
@@ -695,6 +703,7 @@ drawable notify_panel_notification_icon_bg
 drawable radius
 drawable right
 drawable sign4
+drawable suggestion
 drawable tab_contact_selector
 drawable tab_record_selector
 drawable tab_setting_selector
@@ -702,6 +711,8 @@ drawable tab_sign_selector
 drawable table_shape
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable voice_memo
+drawable voicesearch
 drawable withdraw_spinner
 id ALT
 id CTRL
@@ -763,6 +774,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id alarm
 id alertTitle
 id always
 id async
@@ -771,6 +783,8 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn
+id btn_stop
 id buttonPanel
 id center_vertical
 id chains
@@ -813,16 +827,25 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageButton
 id info
 id invisible
 id italic
 id layout
+id layout_effect
+id layout_effect_fd
+id layout_effect_gz
+id layout_effect_hj
+id layout_effect_sm
 id left
 id line1
 id line3
 id listMode
 id list_item
 id menu_add
+id menu_alarmOff
+id menu_alarmOn
+id menu_color
 id menu_delete
 id menu_paste
 id menu_revert
@@ -909,6 +932,8 @@ id title_template
 id today_tab
 id top
 id topPanel
+id txtLog
+id txtResult
 id unchecked
 id uniform
 id up
@@ -957,6 +982,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bottom
+layout common_mini
 layout custom_dialog
 layout fragment_blank
 layout fragment_blank2
@@ -970,6 +996,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout popwindows
 layout search
 layout select_color
 layout select_dialog_item_material
@@ -1049,6 +1076,7 @@ style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
+style AnimationPreview
 style AppTheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light

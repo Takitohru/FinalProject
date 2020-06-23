@@ -1,19 +1,37 @@
 package com.example.android.notepad;
 
 
+import android.Manifest;
 import android.app.Fragment;
 import android.app.ListFragment;
 import android.content.ContentUris;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
+import com.baidu.speech.EventListener;
+import com.baidu.speech.EventManager;
+import com.baidu.speech.EventManagerFactory;
+import com.baidu.speech.asr.SpeechConstant;
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
 
 
 /**
@@ -22,7 +40,7 @@ import android.widget.SimpleCursorAdapter;
  * create an instance of this fragment.
  * 对应着底部栏第二个界面,实现搜索
  */
-public class BlankFragment2 extends ListFragment implements SearchView.OnQueryTextListener{
+public class BlankFragment2 extends ListFragment implements SearchView.OnQueryTextListener, EventListener {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_SHOW_TEXT = "text";
     Intent intent;
@@ -30,8 +48,13 @@ public class BlankFragment2 extends ListFragment implements SearchView.OnQueryTe
             NotePad.Notes._ID, // 0
             NotePad.Notes.COLUMN_NAME_TITLE, // 1
             NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, //2
+            NotePad.Notes.COLUMN_NAME_BACK_COLOR,
+            NotePad.Notes.COLUMN_NAME_ALARM
     };
     SearchView searchview;
+    protected ImageButton startBtn;//开始识别  一直不说话会自动停止，需要再次打开
+    private EventManager asr;//语音识别核心库
+
     public BlankFragment2() {
         // Required empty public constructor
     }
@@ -58,6 +81,12 @@ public class BlankFragment2 extends ListFragment implements SearchView.OnQueryTe
         if (intent.getData() == null) {
             intent.setData(NotePad.Notes.CONTENT_URI);
         }
+        //权限申请
+        initPermission();
+        //初始化EventManager对象
+        asr = EventManagerFactory.create(getActivity(), "asr");
+        //注册自己的输出事件类
+        asr.registerListener(this); //  EventListener 中 onEvent方法
     }
 
     @Override
@@ -68,6 +97,14 @@ public class BlankFragment2 extends ListFragment implements SearchView.OnQueryTe
         searchview = (SearchView)rootView.findViewById(R.id.search_view);
         //监听器
         searchview.setOnQueryTextListener(BlankFragment2.this);
+
+        startBtn = (ImageButton) rootView.findViewById(R.id.imageButton);
+        startBtn.setOnClickListener(new View.OnClickListener() {//开始
+            @Override
+            public void onClick(View v) {
+                asr.send(SpeechConstant.ASR_START, null, null, 0, 0);
+            }
+        });
         return rootView;
     }
     @Override
@@ -118,5 +155,93 @@ public class BlankFragment2 extends ListFragment implements SearchView.OnQueryTe
             startActivity(new Intent(Intent.ACTION_EDIT, uri));
         }
     }
+
+
+    /**
+     * android 6.0 以上需要动态申请权限
+     */
+    private void initPermission() {
+        String permissions[] = {Manifest.permission.RECORD_AUDIO,
+                Manifest.permission.ACCESS_NETWORK_STATE,
+                Manifest.permission.INTERNET,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+        };
+
+        ArrayList<String> toApplyList = new ArrayList<String>();
+
+        for (String perm : permissions) {
+            if (PackageManager.PERMISSION_GRANTED != ContextCompat.checkSelfPermission(getActivity(), perm)) {
+                toApplyList.add(perm);
+                // 进入到这里代表没有权限.
+                Toast.makeText(getActivity(),"没有权限",Toast.LENGTH_SHORT).show();
+            }
+        }
+        String tmpList[] = new String[toApplyList.size()];
+        if (!toApplyList.isEmpty()) {
+            ActivityCompat.requestPermissions(getActivity(), toApplyList.toArray(tmpList), 123);
+        }
+
+    }
+
+    /**
+     * 权限申请回调，可以作进一步处理
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        // 此处为android 6.0以上动态授权的回调，用户自行实现。
+    }
+
+    /**
+     * 自定义输出事件类 EventListener 回调方法
+     */
+    @Override
+    public void onEvent(String name, String params, byte[] data, int offset, int length) {
+
+        if (name.equals(SpeechConstant.CALLBACK_EVENT_ASR_PARTIAL)) {
+            // 识别相关的结果都在这里
+            if (params == null || params.isEmpty()) {
+                return;
+            }
+            /*if (params.contains("\"final_result\"")) {
+                txtResult.setText(params);
+            }*/
+            if (params.contains("\"final_result\"")) {
+                // 一句话的最终识别结果
+                Log.i("ars.event",params);
+
+                Gson gson = new Gson();
+                ASRresponse asRresponse = gson.fromJson(params, ASRresponse.class);//数据解析转实体bean
+
+                if(asRresponse == null) return;
+                //从日志中，得出Best_result的值才是需要的，但是后面跟了一个中文输入法下的逗号，
+                if(asRresponse.getBest_result().contains("，")){//包含逗号  则将逗号替换为空格，这个地方还会问题，还可以进一步做出来，你知道吗？
+                    int id = searchview.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
+                    EditText editText = (EditText) searchview.findViewById(id);
+                    editText.setText(asRresponse.getBest_result().replace('，',' ').trim());//替换为空格之后，通过trim去掉字符串的首尾空格
+                }else {//不包含
+                    int id = searchview.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
+                    EditText editText = (EditText) searchview.findViewById(id);
+                    editText.setText(asRresponse.getBest_result().trim());
+                }
+            }
+        }
+
+    }
+
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        // 基于SDK集成4.2 发送取消事件
+        asr.send(SpeechConstant.ASR_CANCEL, "{}", null, 0, 0);
+        // 基于SDK集成5.2 退出事件管理器
+        // 必须与registerListener成对出现，否则可能造成内存泄露
+        asr.unregisterListener(this);
+    }
+
 
 }

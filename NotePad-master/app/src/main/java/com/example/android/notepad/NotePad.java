@@ -157,5 +157,6 @@ public final class NotePad {
         public static final int GREEN_COLOR = 3;
         public static final int RED_COLOR = 4;
 
+        public static final String COLUMN_NAME_ALARM = "alarm";
     }
 }

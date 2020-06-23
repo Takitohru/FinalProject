@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\android\\final_2\\FinalProject-master\\NotePad-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
+            "outputFile": "D:\\android\\final\\NotePad-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ezaki\\.gradle\\caches\\transforms-2\\files-2.1\\f01b27bb220ecb79298884ef36a7a2fb\\core-1.1.0\\res\\values-ca\\values-ca.xml",
